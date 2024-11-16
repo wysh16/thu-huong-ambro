@@ -1,0 +1,66 @@
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Đăng nhập</h5>
+          <form [formGroup]="loginForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Tài khoản</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Mật khẩu</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="••••••••"
+                required
+                minlength="8"
+              />
+            </div>
+            <div class="form-check d-flex justify-content-between">
+              <div>
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Ghi nhớ đăng nhập</label
+                >
+              </div>
+              <a href="#" class="card-link">Quên mật khẩu?</a>
+            </div>
+            <div class="d-grid gap-2 mt-3 mb-3">
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                (click)="login()"
+              >
+                <a routerLink="/" href="/"> Đăng nhập</a>
+              </button>
+            </div>
+            <div class="text-center">
+              <p class="card-text">
+                Chưa có tài khoản?
+                <a routerLink="/register" href="/register">Đăng ký</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
